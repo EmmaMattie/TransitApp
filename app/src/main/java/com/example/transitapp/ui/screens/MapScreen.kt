@@ -90,13 +90,21 @@ fun MapScreen(viewModel: MainViewModel) {
                     if (vehicle.hasPosition()) {
                         val lat = vehicle.position.latitude
                         val lon = vehicle.position.longitude
-                        Log.d("BUS", "Bus at: $lat, $lon")
+                        val route = vehicle.trip.routeId ?: "?"
 
                         val point = Point.fromLngLat(lon.toDouble(), lat.toDouble())
 
                         val options = PointAnnotationOptions()
                             .withPoint(point)
                             .withIconImage(imageId)
+                            .withTextField(route)
+                            .withTextSize(14.0)
+                            .withTextOffset(listOf(0.0, -0.35))
+                            .withTextColor("#003366")
+                            .withTextHaloColor("#FFFFFF")
+                            .withTextHaloWidth(2.5)
+
+
 
                         pointAnnotationManager.create(options)
                     }
