@@ -5,6 +5,7 @@ This app shows live bus locations in Halifax on a map using GTFS data. It also s
 ## Features
 - Real-time bus locations from Halifax GTFS feed
 - Device location with a blue dot 
+- Bus route numbers are shown inside each icon on the map
 - Auto-refreshes every 15 seconds
 - A second screen that shows nearby stops with route numbers and times
 - Built using Kotlin and Jetpack Compose with Mapbox
